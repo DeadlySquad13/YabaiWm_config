@@ -1,0 +1,27 @@
+yabai -m config layout bsp
+
+# Padding.
+yabai -m config top_padding    4
+yabai -m config bottom_padding 4
+yabai -m config left_padding   4
+yabai -m config right_padding  4
+yabai -m config window_gap     4
+
+# Mouse.
+yabai -m config mouse_follows_focus off
+
+yabai -m config mouse_modifier alt
+# - Left click + drag = move.
+yabai -m config mouse_action1 move
+# - Right click + drag = resize.
+yabai -m config mouse_action2 resize
+# - Dragging window to the other area window = swap.
+yabai -m config mouse_drop_action swap
+
+# Disable specific apps.
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+
+
+# vi: filetype=sh
